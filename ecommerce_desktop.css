@@ -1,0 +1,413 @@
+@media (min-width: 1200px) {
+
+.container {
+  margin: 3em 8em 0 8em;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2em;
+    border-bottom: 1px solid gray;
+}
+
+#close {
+  display: none;
+}
+
+#navToggle, #cartToggle {
+  display: none;
+}
+
+#navmenu {
+  margin-left: 2em;
+  height: 100%;
+  width: 100%;
+  display: inline;
+}
+
+#navmenu ul {
+  list-style-type: none;
+  height: 100%;
+  width: max-content;
+  background: white;
+  text-align: left;
+  margin: 0;
+  padding-left: 1em;
+  cursor: default;
+}
+
+#navmenu li {
+  margin: 1em;
+  padding: 1em;
+  padding-bottom: 3.1em;
+  font-weight: bold;
+  display: inline;
+  border-color: orange;
+  transition: all 150ms ease-in 50ms;
+}
+#navmenu li, #navmenu a, .delete, .pre img, .next img, #cart img, #avatar img, #thumbnails img, button, .slide img {
+  cursor: pointer;
+}
+#navmenu a {
+  text-decoration: none;
+  color: black;
+}
+
+#navmenu li:hover {
+  border-bottom:4px solid orange;
+}
+
+.navItem {
+  display: flex;
+}
+
+#avatar {
+  margin-left: 20px;
+}
+
+#avatar img {
+  height: 50px;
+  width: 50px;
+}
+
+#avatar img:hover {
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+
+.navItem div {
+    display: inline;
+}
+
+#hamburger {
+    display: none;
+}
+
+#cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#cartVolume {
+  background-color: orange;
+  color: white;
+  font-size: 10px;
+  border-radius: 0.5em;
+  width: fit-content;
+  position: absolute;
+  top: 1em;
+  right: -0.5em;
+  padding: 0.1em 0.5em;
+  display: none;
+}
+
+#cartToggle:checked ~ #cartContent {
+  display: flex;
+}
+
+#cart img {
+  width: 25px;
+}
+
+#logo {
+  display: block;
+}
+
+#cartContent {
+  background: white;
+  margin: 0;
+  position: absolute;
+  width: 20em;
+  z-index: 70;
+  display: none;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  top: 8em;
+  transform: translate(-50%, 0);
+  box-shadow: 0px 15px 25px lightgrey;
+}
+
+#cartContent span:first-of-type {
+  display: inline-block;
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+  font-weight:bold ;
+  padding: 1em;
+}
+
+#cartContent p {
+  text-align: center;
+}
+
+#cartContent #purchaseContent span {
+  font-weight: 100;
+  width: 100%;
+  border: none;
+}
+
+#purchaseContent {
+  padding: 1em;
+}
+
+#purchaseContent div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#purchaseContent img {
+  height: auto;
+  width: auto;
+}
+
+#purchaseContent img.purchaseThumbnail {
+  height: 50px;
+  width: 50px;
+  border-radius: 0.5rem;
+}
+
+#purchaseContent .addButton {
+  box-shadow: none;
+}
+
+#cartContent #purchaseContent span #total {
+  font-weight: bold;
+  display: inline;
+  padding: 0;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5em 3em;
+    margin: 0.95em 0;
+}
+
+
+#itemPreview {
+    position: relative;
+    width: 100%;
+  }
+  
+  #previews {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  img.preview {
+    width: 100%;
+  }
+
+  #thumbnails {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #thumbnails label {
+    margin: 1em;
+  }
+
+  #thumbnails img {
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #thumbnails img:hover {
+    opacity: 80%;
+  }
+
+  .selected {
+    border: 3px solid darkorange;
+    opacity: 65%;
+  }
+
+  .slide img, #thumbnails img {
+    border-radius: 1em;
+  }
+  
+  .slide {
+    width:100%;
+    display: none;
+    position: relative;
+    z-index: 70;
+  }
+
+  .slide label {
+    display: none;
+  }
+  
+  .pre, .next {
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+    top: 50%;
+  }
+  
+  .pre>img:active, .next>img:active {
+    border: 2px solid black;
+  }
+  
+  .pre img, .next img {
+    background: white;
+    padding: 10px;
+    border-radius: 1.5rem;
+    height: 10px;
+    width: 10px;
+  }
+  
+  .pre {
+    left:0;
+  }
+  
+  .next {
+    right:0;
+  }
+  
+  #i1, #i2, #i3, #i4 {
+    display: none;
+  }
+  
+  #i1:checked ~ #img1 {
+    display: block;
+  }
+
+  #i2:checked ~ #img2 {
+    display: block;
+  }
+
+  #i3:checked ~ #img3 {
+    display: block;
+  }
+  #i4:checked ~ #img4 {
+    display: block;
+  }
+  
+  .preview {
+    height: auto;
+    width: 100%;
+    border-radius: 0.7rem;
+  }
+
+  #infoPurchase {
+    margin-left: 5em;
+    align-self: center;
+    font-size: 17px;
+    line-height: 1.5em;
+  }
+
+  #infoPurchase h1 {
+    line-height: 1.5em;
+  }
+
+  #info span {
+    color: darkorange;
+  }
+  
+  p {
+    line-height: 1.75em;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  #quantity {
+    height: 3em;
+    background: #F4F4F4;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  input#quantityInput {
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  
+  .addButton {
+    width: 100%;
+    height: 4em;
+    border-radius: 0.7em;
+    background: darkorange;
+    border: 0;
+    box-shadow: 2px 10px 50px #FF840091;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #incr svg, #dcr svg {
+    fill: darkorange;
+  }
+  
+  .addButton:hover, #incr:hover svg, #dcr:hover svg {
+    opacity: 70%;
+  }
+  
+  .addButton span {
+    margin-left: 10px;
+    font-size: 120%;
+  }
+  
+  #price {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    place-content: center;
+  }
+
+  #one {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 20px 0;
+    height: fit-content;
+  }
+  
+  #two {
+    padding: 3px 7px;
+    color: darkorange;
+    background: #FF840022;
+    border-radius: 0.3em;
+    font-weight: bold;
+    margin: 20px 0 20px 15px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  #three {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: line-through;
+    color: lightgrey;
+    margin: 0;
+    width: fit-content;
+    margin-bottom: 2em;
+  }
+
+  #add {
+    display: flex;
+  }
+
+  #quantity {
+    width: fit-content;
+  }
+
+  #focusMode {
+    display: none;
+  }
+}
