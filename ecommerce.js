@@ -47,7 +47,9 @@ $(document).ready(function () {
     //empty cart and remove label
     $("img.delete").click( function () {
       purchaseContent.html(empty);
-      $("#cartVolume").fadeOut('fast').empty();
+      $("#cartVolume").fadeOut('fast', () => {
+          $(this).empty();
+      });
     });
   });
 
